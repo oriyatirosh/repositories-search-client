@@ -1,0 +1,109 @@
+@import "../variables.scss";
+
+.search-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .search {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border: 1px solid $input-border;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      transition: border $transition;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background $transition;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-light;
+      flex: 1 1 calc(50% - 1rem);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .info {
+        flex: 1;
+
+        a {
+          font-weight: 600;
+          color: $primary-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      button {
+        padding: 0.4rem 0.8rem;
+        background-color: $secondary-color;
+        color: #fff;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background $transition;
+
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .my-Bookmarks {
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    background-color: $primary-color;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background $transition;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}

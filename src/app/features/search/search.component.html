@@ -1,0 +1,27 @@
+<div class="search-page-container">
+  <div class="search">
+    <input
+      id="search-query"
+      name="search-query"
+      [(ngModel)]="query"
+      (keyup.enter)="search()"
+      placeholder="Search GitHub repositories"
+      autocomplete="off"
+    />
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div *ngIf="loading">Loading...</div>
+
+  <div class="gallery">
+    <div class="card" *ngFor="let r of results">
+      <img [src]="r.owner.avatarUrl" alt="avatar" width="60" height="60" />
+      <div class="info">
+        <a [href]="r.htmlUrl" target="_blank">{{ r.fullName }}</a>
+      </div>
+      <button (click)="bookmark(r)">Bookmark</button>
+    </div>
+  </div>
+
+  <button routerLink="/bookmarks" class="my-Bookmarks">My Bookmarkssss</button>
+</div>

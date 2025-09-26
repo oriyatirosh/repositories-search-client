@@ -1,0 +1,75 @@
+@import "../variables.scss";
+
+.bookmarks-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .bookmarks-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+  }
+
+  .bookmark-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $input-border;
+    border-radius: $border-radius;
+    background-color: $background-color;
+
+    .bookmark-avatar {
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .bookmark-link {
+      flex: 1;
+      font-weight: 600;
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+
+    .bookmark-remove-button {
+      padding: 0.3rem 0.6rem;
+      background-color: $danger-color;
+      color: #fff;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background $transition;
+
+      &:hover {
+        background-color: darken($danger-color, 10%);
+      }
+    }
+  }
+
+  .back-to-search {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: $primary-color;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background $transition;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
