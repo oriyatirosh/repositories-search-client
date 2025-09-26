@@ -16,3 +16,6 @@ This frontend provides a GitHub repository search interface.
 cd client/github-search-app
 npm install
 ng serve
+
+#backend repsitory: repositories-search-backend
+
